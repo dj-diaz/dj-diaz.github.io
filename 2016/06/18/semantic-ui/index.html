@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blogging about web development with javascript, Games, and a little bit of game development too">
+    <meta name="keywords" content="DJ, Blog, Web Development, Games, Javascript, Game Development, Game Engine">
+    <meta name="author" content="DJ Diaz">
+    <title>Site Update! - Semantic UI | DJ's Blog</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Semantic UI css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+
+    <!-- Custom CSS -->
+    <link href="/css/blog-home.css" rel="stylesheet">
+    <link href="/css/monokai.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="ui top fixed secondary pointing gray inverted menu" id="blog-navigation">
+        <h3 class="header item" name="top">DJ's Blog</h1>
+        <div class="item">
+            <a href="/">Home</a>
+        </div>
+        <div class="item">
+            <a href="/about">About</a>
+        </div>
+        <div class="right menu">
+            <div class="item">
+                <a href="/rss.xml"><i class="rss icon"></i> RSS </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="ui basic centered stackable padded grid">
+        <div class="row">
+            <div class="center aligned sixteen wide column blog-header" style="padding-top: 60px !important;">
+                <h2 class="ui header"><a href="/"> DJ's Blog</a></h2>
+                <h3 class="ui header">An atrocious attempt to blog.</h3>
+                <img src="/css/img/banner.jpg" />
+            </div>
+        </div>
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="nine wide computer tablet sixteen wide mobile column">
+              <article class="post" id="post">
+  <h1>Site Update! - Semantic UI</h1>
+  <p><span class="glyphicon glyphicon-time"> </span> Posted on: June 18, 2016</p>
+  <div class="blog-article">
+    <h2 id="introduction">Introduction</h2>
+<p>Hello! I recently stumbled upon a course on <a href="https://www.pluralsight.com/">Pluralsight</a> called <a href="https://app.pluralsight.com/library/courses/semantic-ui-2-0/table-of-contents">Semantic UI 2.0</a> by <a href="https://app.pluralsight.com/author/nate-taylor">Nate Taylor</a>. I watched a couple of videos and I decided that I will try to re design this blog with semantic ui. </p>
+<p>The website is currently made with bootstrap and I must say it really have that bootstrap feel into it. I recently just changed the Tags section from using simple anchor tags it&#39;s now using semantic ui tag element. What I like about semantic ui is that the elements are easy to configure, lets refer to the following.</p>
+<p>Let&#39;s make simple tag label element</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui tag label"</span>&gt;</span>
+    Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>The result of the code snippet above is the following:</p>
+<div class="ui segment">
+    <div class="ui tag label">
+        Burrito
+    </div>
+</div>
+
+<p>Now what if we want to turn that tag to black like the one&#39;s I&#39;m using on this site. Simple enough all we have to do is add <code>black</code> class into the div element like so:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui black tag label"</span>&gt;</span>
+    Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>And the result:</p>
+<div class="ui segment">
+    <div class="ui black tag label">
+        Burrito
+    </div>
+</div>
+
+<p>As you can see the css classes that we&#39;re using are plain english. It&#39;s one of the selling point of semantic ui for me. One little thing I don&#39;t understand though is the order of the classes. I&#39;m not exactly sure yet if the order matters or not.</p>
+<p>I really like the ability to costumize the elements by simply adding another css class. It&#39;s like building something with lego. You pick and match the css class you want. This is so brilliant, in my opinion. Let&#39;s make that previous black tag label huge by adding a <code>massive</code> class:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui massive black tag label"</span>&gt;</span>
+    Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>And the result:</p>
+<div class="ui segment">
+    <div class="ui massive black tag label">
+        Burrito
+    </div>
+</div>
+
+<p>See? That is massive indeed.
+Let&#39;s try another one. Maybe with a different color and let&#39;s try adding an icon.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui massive red tag label"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bomb icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+    Dangerous Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="ui segment">
+    <div class="ui massive red tag label">
+        <i class="bomb icon"></i>
+        Dangerous Burrito
+    </div>
+</div>
+
+<p>Oh yeah!! That thing looks really dangerous. But you know what... Let&#39;s try doing something crazy. How about we make that bomb spin. We can achieve that effect by adding the <code>loading</code> class to the icon element. </p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui massive red tag label"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"loading bomb icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+    Dangerous Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="ui segment">
+    <div class="ui massive red tag label">
+        <i class="loading bomb icon"></i>
+        Dangerous Burrito
+    </div>
+</div>
+
+<p>Semantic UI is really flexible. Although I admit sometimes it can be confusing or maybe that&#39;s because I&#39;m just new to this thing (PS: I&#39;m also really terrible at remembering the css class names. I can&#39;t even make a bootstrap navbar without searching google.). I&#39;ve been using it for a day now! :D</p>
+<p>That&#39;s it for now guys! I&#39;ll keep you updated on the updates that I&#39;ll be doing on this site but for now I need to dig deeper into Semantic UI. I know that what I did here is just tickling the surface of what semantic ui can do. I&#39;m really excited to learn more. </p>
+<p>If you have suggestions guys feel free to comment below!</p>
+
+  </div>
+  <br>
+  <div class="ui black tag labels">
+    <h4 class="ui header">Tags:</h4>
+    
+      <div class="ui label">
+        Semantic UI
+      </div>
+    
+      <div class="ui label">
+        Updates
+      </div>
+    
+  </div>
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#CONFIGURATIONuration-variables
+       */
+
+      var disqus_config = function () {
+          this.page.url = 'http://dj.diaz.tech/2016/06/18/semantic-ui/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = 'Site Update! - Semantic UI'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      // var disqus_shortname = 'dijsblog';
+      // var disqus_identifier = '/2016/06/18/semantic-ui/';
+      // var disqus_title = 'Site Update! - Semantic UI';
+
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = '//dijsblog.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="five wide computer table sixteen wide mobile column">
+
+                <!-- Blog Search Well -->
+                <div class="ui padded raised segment">
+                    <h4>Subscribe.</h4>
+                        <p>
+                          You can't. for now. :P
+                        </p>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Recently Posted -->
+                <div class="ui padded raised segment">
+                    <h4>Recently Posted</h4>
+                    <div class="ui list">
+                        
+                            <a href="/2016/08/14/djs-july-update/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    August 14, 2016 &raquo; &raquo; DJ's Blog - July Update
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/07/06/semantic-ui-navigation-bar/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    July 6, 2016 &raquo; &raquo; How to make a Navigation Bar in Semantic UI
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/28/just-a-little-update/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 28, 2016 &raquo; &raquo; An update on how things are going
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/18/semantic-ui/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 18, 2016 &raquo; &raquo; Site Update! - Semantic UI
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/14/hello-world/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 14, 2016 &raquo; &raquo; Hello World! Welcome to my Blog!
+                                </span>
+                            </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="ui padded raised segment">
+                    <h4>Tags</h4>
+                    <div class="row">
+                        <div>
+                            <div class="ui black tag labels">
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/hello-world">Hello World!</a>
+                                    </div>
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/semantic-ui">Semantic UI</a>
+                                    </div>
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/updates">Updates</a>
+                                    </div>
+                              
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                <div class="center aligned" id="divfix">
+                  <a type="button" name="button" href="#top" class="large red circular ui icon button">
+                    <i class="large icon chevron circle up"></i>
+                  </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+        <div class="ten wide column">
+            <hr>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="ui centered stackable grid">
+                <div class="center aligned eight wide column">
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Posts on</span> <a xmlns:cc="http://creativecommons.org/ns#" href="http://dj.diaz.tech" property="cc:attributionName" rel="cc:attributionURL">This blog</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                </div>
+            </div>
+                <!-- /.col-lg-12 -->
+            <!-- /.row -->
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Disqus count script -->
+    <script id="dsq-count-scr" src="//dijsblog.disqus.com/count.js" async></script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Semantic UI Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+
+    <!-- Site javascript files -->
+    <script src="/js/animation.js"> </script>
+</body>
+
+</html>

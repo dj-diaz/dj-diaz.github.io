@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[DJ's Blog]]></title>
+        <description><![CDATA[Blogging about web development with javascript, Games, and a little bit of game development too]]></description>
+        <link>http://dj.diaz.tech</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sun, 14 Aug 2016 06:28:19 GMT</lastBuildDate>
+        <atom:link href="http://dj.diaz.tech/rss.xml" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[DJ Diaz]]></author>
+        <pubDate>Sun, 14 Aug 2016 06:28:17 GMT</pubDate>
+        <item>
+            <title><![CDATA[DJ's Blog - July Update]]></title>
+            <description><![CDATA[<ul>
+<li>July 19 - I Leveled up. Age +1 Wooo Happy Birthday to Me!</li>
+<li>Updated website font face and font size for better readability.</li>
+<li>And I&#39;m currently looking into technologies that would allow me to make mobile apps.
+As of now, I&#39;ve looked into React Native, Native Script and Xamarin. I&#39;ve only had one problem on
+all of them. Actually the problem is not on those frameworks / libraries. It&#39;s my PC aka The Stinky Toaster. I can&#39;t run android emulator smoothly. So I&#39;m currently looking to try Genymotion or Microsoft&#39;s Android Emulator.
+Also I&#39;m more inclined towards Xamarin since I really wanted to explore a different language and C# looks good to me. The biggest problem that I&#39;m facing probably is my really really old PC. I really need an upgrade soon.</li>
+</ul>
+<p>My PC old broke and I had no PC for around 2 weeks hence this post being posted late. I just finished building my new pc the other day. The good thing is. This PC is more powerful. I&#39;m pretty sure I can run Unreal Engine 4 now.</p>
+<h1 id="future-plan">Future plan</h1>
+<p>I&#39;m planning on building an angular app to learn <a href="http://backand.com">backand</a> and maybe also a companion ionic app.</p>
+]]></description>
+            <link>http://dj.diaz.tech/2016/08/14/djs-july-update/</link>
+            <guid isPermaLink="true">http://dj.diaz.tech/2016/08/14/djs-july-update/</guid>
+            <dc:creator><![CDATA[DJ Diaz]]></dc:creator>
+            <pubDate>Sun, 14 Aug 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to make a Navigation Bar in Semantic UI]]></title>
+            <description><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>A navigation bar at the top of a webpage is common nowadays. It&#39;s either in the form of a navigation header that&#39;s at the top of your page or an hamburger menu that either slides down or from the side of your website. In this tutorial we&#39;ll take a look at both.</p>
+<h2 id="preperation-">Preperation.</h2>
+<p>I forgot to do this in the previous post but we have to do some preparations before we can start using semantic ui. We have to include in first in our html page. There are two ways to do this.</p>
+<ol>
+<li>Using NPM and Gulp, going this route gives you a lot of flexible costumizations but It&#39;s a little bit complex. <a href="http://semantic-ui.com/introduction/getting-started.html#install-nodejs">Click Here</a> to learn more.</li>
+<li>The second way is the simplest using a cdn which we&#39;re going to do now. In your html page add the following lines of code.</li>
+</ol>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-comment">&lt;!-- Semantic UI css --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span>
+    <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css"</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Semantic UI Javascript --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>Now we&#39;re ready! let&#39;s make the simplest navigation bar we can make. In semantic, a navigation bar is a variation of the menu collection.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>And the result of the snippet above is the following:</p>
+<div class="ui menu">
+  <div class="header item">
+    Navigation
+  </div>
+</div>
+
+<p>Let&#39;s try making a variation. Let&#39;s make this one color red.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui red inverted menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="ui red inverted menu">
+  <div class="header item">
+    Navigation
+  </div>
+</div>
+
+
+<p>Notice that we need to add the <code>inverted</code> modifier because by default semantic ui
+will only make the outline red.</p>
+<h2 id="navbar-variations">Navbar Variations</h2>
+<p>There are some variations menu element that works really great as navigation bars. Let&#39;s take a look at some of those.</p>
+<h3 id="secondary-menu">Secondary menu</h3>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui secondary menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>The code snippet above results to the following:</p>
+<div class="ui secondary menu">
+  <div class="header item">
+    Navigation
+  </div>
+  <a href="#" class="item">About</a>
+  <a href="#" class="item">Contact</a>
+</div>
+
+<h3 id="pointing">Pointing</h3>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui pointing menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header active item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p> The active item is the one with pointing stuff.</p>
+ <div class="ui pointing menu">
+   <div class="header active item">
+     Navigation
+   </div>
+   <a href="#" class="item">About</a>
+   <a href="#" class="item">Contact</a>
+ </div>
+
+
+<h3 id="secondary-pointing">Secondary pointing</h3>
+<p>This one is what I&#39;m using on this site, except it&#39;s inverted.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui secondary pointing menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header active item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>The snippet above looks like the following:</p>
+<div class="ui secondary pointing menu">
+  <div class="header active item">
+    Navigation
+  </div>
+  <a href="#" class="item">About</a>
+  <a href="#" class="item">Contact</a>
+</div>
+
+
+<h2 id="conclusion">Conclusion</h2>
+<p>That&#39;s just scratching the surface! Semantic UI can do a lot more. I <strong>highly</strong> suggest you read
+more <a href="http://semantic-ui.com/collections/menu.html">over at semantic-ui&#39;s documentation</a></p>
+]]></description>
+            <link>http://dj.diaz.tech/2016/07/06/semantic-ui-navigation-bar/</link>
+            <guid isPermaLink="true">http://dj.diaz.tech/2016/07/06/semantic-ui-navigation-bar/</guid>
+            <dc:creator><![CDATA[DJ Diaz]]></dc:creator>
+            <pubDate>Wed, 06 Jul 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[An update on how things are going]]></title>
+            <description><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Wooooh!! The site is now converted to semantic-ui. It&#39;s still the same structure
+I just changed the elements. The most drastic change probably is the header image
+and the navigation bar. aside from that its pretty much the same.</p>
+<h2 id="why-no-post-for-a-long-time">Why no post for a long time</h2>
+<p>I actually wanted to document the changes that I made to the design of the site
+but then steam sale came in and I&#39;m just playing mount and blade warband since I got it.</p>
+<p>That&#39;s it for this small update. I don&#39;t know what else to write. I guess I should try
+harder next time. lol. peace :D</p>
+]]></description>
+            <link>http://dj.diaz.tech/2016/06/28/just-a-little-update/</link>
+            <guid isPermaLink="true">http://dj.diaz.tech/2016/06/28/just-a-little-update/</guid>
+            <dc:creator><![CDATA[DJ Diaz]]></dc:creator>
+            <pubDate>Tue, 28 Jun 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Site Update! - Semantic UI]]></title>
+            <description><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Hello! I recently stumbled upon a course on <a href="https://www.pluralsight.com/">Pluralsight</a> called <a href="https://app.pluralsight.com/library/courses/semantic-ui-2-0/table-of-contents">Semantic UI 2.0</a> by <a href="https://app.pluralsight.com/author/nate-taylor">Nate Taylor</a>. I watched a couple of videos and I decided that I will try to re design this blog with semantic ui. </p>
+<p>The website is currently made with bootstrap and I must say it really have that bootstrap feel into it. I recently just changed the Tags section from using simple anchor tags it&#39;s now using semantic ui tag element. What I like about semantic ui is that the elements are easy to configure, lets refer to the following.</p>
+<p>Let&#39;s make simple tag label element</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui tag label"</span>&gt;</span>
+    Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>The result of the code snippet above is the following:</p>
+<div class="ui segment">
+    <div class="ui tag label">
+        Burrito
+    </div>
+</div>
+
+<p>Now what if we want to turn that tag to black like the one&#39;s I&#39;m using on this site. Simple enough all we have to do is add <code>black</code> class into the div element like so:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui black tag label"</span>&gt;</span>
+    Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>And the result:</p>
+<div class="ui segment">
+    <div class="ui black tag label">
+        Burrito
+    </div>
+</div>
+
+<p>As you can see the css classes that we&#39;re using are plain english. It&#39;s one of the selling point of semantic ui for me. One little thing I don&#39;t understand though is the order of the classes. I&#39;m not exactly sure yet if the order matters or not.</p>
+<p>I really like the ability to costumize the elements by simply adding another css class. It&#39;s like building something with lego. You pick and match the css class you want. This is so brilliant, in my opinion. Let&#39;s make that previous black tag label huge by adding a <code>massive</code> class:</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui massive black tag label"</span>&gt;</span>
+    Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>And the result:</p>
+<div class="ui segment">
+    <div class="ui massive black tag label">
+        Burrito
+    </div>
+</div>
+
+<p>See? That is massive indeed.
+Let&#39;s try another one. Maybe with a different color and let&#39;s try adding an icon.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui massive red tag label"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bomb icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+    Dangerous Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="ui segment">
+    <div class="ui massive red tag label">
+        <i class="bomb icon"></i>
+        Dangerous Burrito
+    </div>
+</div>
+
+<p>Oh yeah!! That thing looks really dangerous. But you know what... Let&#39;s try doing something crazy. How about we make that bomb spin. We can achieve that effect by adding the <code>loading</code> class to the icon element. </p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui massive red tag label"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"loading bomb icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+    Dangerous Burrito
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="ui segment">
+    <div class="ui massive red tag label">
+        <i class="loading bomb icon"></i>
+        Dangerous Burrito
+    </div>
+</div>
+
+<p>Semantic UI is really flexible. Although I admit sometimes it can be confusing or maybe that&#39;s because I&#39;m just new to this thing (PS: I&#39;m also really terrible at remembering the css class names. I can&#39;t even make a bootstrap navbar without searching google.). I&#39;ve been using it for a day now! :D</p>
+<p>That&#39;s it for now guys! I&#39;ll keep you updated on the updates that I&#39;ll be doing on this site but for now I need to dig deeper into Semantic UI. I know that what I did here is just tickling the surface of what semantic ui can do. I&#39;m really excited to learn more. </p>
+<p>If you have suggestions guys feel free to comment below!</p>
+]]></description>
+            <link>http://dj.diaz.tech/2016/06/18/semantic-ui/</link>
+            <guid isPermaLink="true">http://dj.diaz.tech/2016/06/18/semantic-ui/</guid>
+            <dc:creator><![CDATA[DJ Diaz]]></dc:creator>
+            <pubDate>Sat, 18 Jun 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Hello World! Welcome to my Blog!]]></title>
+            <description><![CDATA[<h2 id="hello-there-">Hello There!</h2>
+<p>Hi! my name is DJ Diaz. Thanks for visiting blog. I doubt you&#39;ll find anything interesting here at the moment since I&#39;m just starting out.</p>
+<p>Thanks for visiting anyway.
+If you want to learn more about me. Feel free to click that about me link in the navigation bar. <em><a href="http:://dj-diaz.github.io/about/">Or click here </a></em></p>
+<h2 id="what-this-blog-is-about">What this blog is about</h2>
+<p>This blog is going to be some sort of Learning Log for me.
+I will document stuffs I learn here as well as silly stories I have. I am really interested in JavaScript specially with ES2015 already there. I am also a little bit into playing around with game engines. Unfortunately I really lack artistic sense so I can&#39;t produce my own art assets.</p>
+<p>Well that&#39;s it for now stay tune for more content!</p>
+<p>By the way! If you&#39;re curious this blog is made with the help of <a href="https://app.pluralsight.com/library/courses/static-site-generator-build-better-blog/table-of-contents">Jeff Ammon&#39;s course in Pluralsight</a> about static blogs with DocPad. It&#39;s the same as the course project except for the banner photo! Hahaha.</p>
+]]></description>
+            <link>http://dj.diaz.tech/2016/06/14/hello-world/</link>
+            <guid isPermaLink="true">http://dj.diaz.tech/2016/06/14/hello-world/</guid>
+            <dc:creator><![CDATA[DJ Diaz]]></dc:creator>
+            <pubDate>Tue, 14 Jun 2016 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

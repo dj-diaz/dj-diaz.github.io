@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blogging about web development with javascript, Games, and a little bit of game development too">
+    <meta name="keywords" content="DJ, Blog, Web Development, Games, Javascript, Game Development, Game Engine">
+    <meta name="author" content="DJ Diaz">
+    <title>Assignment: Database Fundamentals 1 | DJ's Blog</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Semantic UI css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+
+    <!-- Custom CSS -->
+    <link href="/css/blog-home.css" rel="stylesheet">
+    <link href="/css/monokai.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="ui top fixed secondary pointing gray inverted menu" id="blog-navigation">
+        <h3 class="header item">DJ's Blog</h1>
+        <div class="item">
+            <a href="/">Home</a>
+        </div>
+        <div class="item">
+            <a href="/about">About</a>
+        </div>
+        <div class="right menu">
+            <div class="item">
+                <a href="/rss.xml"><i class="rss icon"></i> RSS </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="ui basic centered stackable padded grid">
+        <div class="row">
+            <div class="center aligned sixteen wide column blog-header" style="padding-top: 60px !important;">
+                <h2 class="ui header"><a href="/"> DJ's Blog</a></h2>
+                <h3 class="ui header">An atrocious attempt to blog.</h3>
+                <img src="/css/img/banner.jpg" />
+            </div>
+        </div>
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="nine wide computer tablet sixteen wide mobile column">
+              <article class="post" id="post">
+  <h1>Assignment: Database Fundamentals 1</h1>
+  <p><span class="glyphicon glyphicon-time"> </span> Posted on: July 6, 2016</p>
+  <h1 id="differentiate-data-from-information">Differentiate Data from Information</h1>
+<p>Data are facts, figures or unorganized data that needs to be processed. Data is alone enough to get details and find the meaning of something.</p>
+<p>Information is when data are processed, interpreted, organized, structured or presented so as to make them meaningful or useful.</p>
+<p>source: <a href="http://www.diffen.com/difference/Data_vs_Information">http://www.diffen.com/difference/Data_vs_Information</a>, <a href="http://www.differencebtw.com/difference-between-data-and-information/">http://www.differencebtw.com/difference-between-data-and-information/</a></p>
+<h1 id="what-is-a-database-database-management-system-and-file-system-">What is a database, database management system and file system.</h1>
+<h3 id="what-is-a-database">What is a Database</h3>
+<p>A database is a collection of information that is organized so that it can easily be accessed, managed, and updated. In one view, databases can be classified according to types of content: bibliographic, full-text, numeric, and images.
+source: <a href="http://searchsqlserver.techtarget.com/definition/database">http://searchsqlserver.techtarget.com/definition/database</a></p>
+<h3 id="what-is-a-database-management-system-">What is a Database Management System.</h3>
+<p>A database management system (DBMS) is system software for creating and managing databases. The DBMS provides users and programmers with a systematic way to create, retrieve, update and manage data.
+source: <a href="http://searchsqlserver.techtarget.com/definition/database-management-system">http://searchsqlserver.techtarget.com/definition/database-management-system</a></p>
+<h3 id="what-is-a-file-system">What is a File system</h3>
+<p>In a computer, a file system is the way in which files are named and where they are placed logically for storage and retrieval.
+source: <a href="http://searchstorage.techtarget.com/definition/file-system">http://searchstorage.techtarget.com/definition/file-system</a></p>
+<h1 id="what-are-the-database-management-system-environment-parts">What are the database management system environment parts</h1>
+<ol>
+<li><p>Software
+This is the set of programs used to control and manage the overall database. This includes the DBMS software itself, the Operating System, the network software being used to share the data among users, and the application programs used to access data in the DBMS.</p>
+</li>
+<li><p>Hardware
+Consists of a set of physical electronic devices such as computers, I/O devices, storage devices, etc., this provides the interface between computers and the real world systems.</p>
+</li>
+<li><p>Data
+DBMS exists to collect, store, process and access data, the most important component. The database contains both the actual or operational data and the metadata.</p>
+</li>
+<li><p>Procedures
+These are the instructions and rules that assist on how to use the DBMS, and in designing and running the database, using documented procedures, to guide the users that operate and manage it.</p>
+</li>
+<li><p>Database Access Language
+This is used to access the data to and from the database, to enter new data, update existing data, or retrieve required data from databases. The user writes a set of appropriate commands in a database access language, submits these to the DBMS, which then processes the data and generates and displays a set of results into a user readable form.</p>
+</li>
+<li><p>Query Processor
+This transforms the user queries into a series of low level instructions. This reads the online user’s query and translates it into an efficient series of operations in a form capable of being sent to the run time data manager for execution.</p>
+</li>
+<li><p>Run Time Database Manager
+Sometimes referred to as the database control system, this is the central software component of the DBMS that interfaces with user-submitted application programs and queries, and handles database access at run time. Its function is to convert operations in user’s queries. It provides control to maintain the consistency, integrity and security of the data.</p>
+</li>
+<li><p>Data Manager
+Also called the cache manger, this is responsible for handling of data in the database, providing a recovery to the system that allows it to recover the data after a failure.</p>
+</li>
+<li><p>Database Engine
+The core service for storing, processing, and securing data, this provides controlled access and rapid transaction processing to address the requirements of the most demanding data consuming applications. It is often used to create relational databases for online transaction processing or online analytical processing data.</p>
+</li>
+<li><p>Data Dictionary
+This is a reserved space within a database used to store information about the database itself. A data dictionary is a set of read-only table and views, containing the different information about the data used in the enterprise to ensure that database representation of the data follow one standard as defined in the dictionary.</p>
+</li>
+<li><p>Report Writer
+Also referred to as the report generator, it is a program that extracts information from one or more files and presents the information in a specified format. Most report writers allow the user to select records that meet certain conditions and to display selected fields in rows and columns, or also format the data into different charts.</p>
+</li>
+</ol>
+<p>source: <a href="https://www.dataentryoutsourced.com/blog/components-of-a-database-management-system/">https://www.dataentryoutsourced.com/blog/components-of-a-database-management-system/</a></p>
+<h1 id="types-of-anomalies">Types of Anomalies</h1>
+<ol>
+<li><p><strong>Update Anomalies</strong> happen when the person charged with the task of keeping all the records current and accurate, is asked to change an employee’s title due to a promotion. If the data is stored redundantly in the same table, and the person misses any of them, update anomalies and other undesirable things will start to show up.</p>
+</li>
+<li><p><strong>Insertion Anomalies</strong> happen when inserting vital data into the database is not possible because other data is not there. An example of this could be, if a clerk needed to add customer information for a new customer who has not yet made a purchase yet.</p>
+</li>
+<li><p><strong>Deletion Anomalies</strong> happen when the deletion of unwanted information causes wanted information to get deleted as well.</p>
+</li>
+</ol>
+<p>source: <a href="http://databasemanagement.wikia.com/wiki/Data_Anomalies">http://databasemanagement.wikia.com/wiki/Data_Anomalies</a></p>
+
+  <br>
+  <div class="ui black tag labels">
+    <h4 class="ui header">Tags:</h4>
+    
+      <div class="ui label">
+        School Home Work
+      </div>
+    
+      <div class="ui label">
+        Database
+      </div>
+    
+  </div>
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#CONFIGURATIONuration-variables
+       */
+      
+      var disqus_config = function () {
+          this.page.url = 'http://dj.diaz.tech/2016/07/06/assignment-database-fundamentals/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = 'Assignment: Database Fundamentals 1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      
+      // var disqus_shortname = 'dijsblog';
+      // var disqus_identifier = '/2016/07/06/assignment-database-fundamentals/';
+      // var disqus_title = 'Assignment: Database Fundamentals 1';
+
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          
+          s.src = '//dijsblog.disqus.com/embed.js';
+          
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="five wide computer table sixteen wide mobile column">
+
+                <!-- Blog Search Well -->
+                <div class="ui padded raised segment">
+                    <h4>Subscribe.</h4>
+                        <p>
+                          You can't. for now. :P
+                        </p>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Recently Posted -->
+                <div class="ui padded raised segment">
+                    <h4>Recently Posted</h4>
+                    <div class="ui list">
+                        
+                            <a href="/2016/07/06/assignment-database-fundamentals/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    July 6, 2016 &raquo; &raquo; Assignment: Database Fundamentals 1
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/07/06/semantic-ui-navigation-bar/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    July 6, 2016 &raquo; &raquo; How to make a Navigation Bar in Semantic UI
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/28/just-a-little-update/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 28, 2016 &raquo; &raquo; An update on how things are going
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/18/semantic-ui/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 18, 2016 &raquo; &raquo; Site Update! - Semantic UI
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/14/hello-world/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 14, 2016 &raquo; &raquo; Hello World! Welcome to my Blog!
+                                </span>
+                            </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="ui padded raised segment">
+                    <h4>Tags</h4>
+                    <div class="row">
+                        <div>
+                            <div class="ui black tag labels">
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/database">Database</a>
+                                    </div>
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/hello-world">Hello World!</a>
+                                    </div>
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/school-home-work">School Home Work</a>
+                                    </div>
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/semantic-ui">Semantic UI</a>
+                                    </div>
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/updates">Updates</a>
+                                    </div>
+                              
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+        <div class="ten wide column">
+            <hr>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="ui centered stackable grid">
+                <div class="center aligned eight wide column">
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Posts on</span> <a xmlns:cc="http://creativecommons.org/ns#" href="http://dj.diaz.tech" property="cc:attributionName" rel="cc:attributionURL">This blog</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                </div>
+            </div>
+                <!-- /.col-lg-12 -->
+            <!-- /.row -->
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Disqus count script -->
+    <script id="dsq-count-scr" src="//dijsblog.disqus.com/count.js" async></script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Semantic UI Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+</body>
+
+</html>

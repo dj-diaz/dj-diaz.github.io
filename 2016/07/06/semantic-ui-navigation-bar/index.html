@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blogging about web development with javascript, Games, and a little bit of game development too">
+    <meta name="keywords" content="DJ, Blog, Web Development, Games, Javascript, Game Development, Game Engine">
+    <meta name="author" content="DJ Diaz">
+    <title>How to make a Navigation Bar in Semantic UI | DJ's Blog</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Semantic UI css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+
+    <!-- Custom CSS -->
+    <link href="/css/blog-home.css" rel="stylesheet">
+    <link href="/css/monokai.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="ui top fixed secondary pointing gray inverted menu" id="blog-navigation">
+        <h3 class="header item" name="top">DJ's Blog</h1>
+        <div class="item">
+            <a href="/">Home</a>
+        </div>
+        <div class="item">
+            <a href="/about">About</a>
+        </div>
+        <div class="right menu">
+            <div class="item">
+                <a href="/rss.xml"><i class="rss icon"></i> RSS </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="ui basic centered stackable padded grid">
+        <div class="row">
+            <div class="center aligned sixteen wide column blog-header" style="padding-top: 60px !important;">
+                <h2 class="ui header"><a href="/"> DJ's Blog</a></h2>
+                <h3 class="ui header">An atrocious attempt to blog.</h3>
+                <img src="/css/img/banner.jpg" />
+            </div>
+        </div>
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="nine wide computer tablet sixteen wide mobile column">
+              <article class="post" id="post">
+  <h1>How to make a Navigation Bar in Semantic UI</h1>
+  <p><span class="glyphicon glyphicon-time"> </span> Posted on: July 6, 2016</p>
+  <div class="blog-article">
+    <h2 id="introduction">Introduction</h2>
+<p>A navigation bar at the top of a webpage is common nowadays. It&#39;s either in the form of a navigation header that&#39;s at the top of your page or an hamburger menu that either slides down or from the side of your website. In this tutorial we&#39;ll take a look at both.</p>
+<h2 id="preperation-">Preperation.</h2>
+<p>I forgot to do this in the previous post but we have to do some preparations before we can start using semantic ui. We have to include in first in our html page. There are two ways to do this.</p>
+<ol>
+<li>Using NPM and Gulp, going this route gives you a lot of flexible costumizations but It&#39;s a little bit complex. <a href="http://semantic-ui.com/introduction/getting-started.html#install-nodejs">Click Here</a> to learn more.</li>
+<li>The second way is the simplest using a cdn which we&#39;re going to do now. In your html page add the following lines of code.</li>
+</ol>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-comment">&lt;!-- Semantic UI css --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span>
+    <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css"</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Semantic UI Javascript --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>Now we&#39;re ready! let&#39;s make the simplest navigation bar we can make. In semantic, a navigation bar is a variation of the menu collection.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>And the result of the snippet above is the following:</p>
+<div class="ui menu">
+  <div class="header item">
+    Navigation
+  </div>
+</div>
+
+<p>Let&#39;s try making a variation. Let&#39;s make this one color red.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui red inverted menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="ui red inverted menu">
+  <div class="header item">
+    Navigation
+  </div>
+</div>
+
+
+<p>Notice that we need to add the <code>inverted</code> modifier because by default semantic ui
+will only make the outline red.</p>
+<h2 id="navbar-variations">Navbar Variations</h2>
+<p>There are some variations menu element that works really great as navigation bars. Let&#39;s take a look at some of those.</p>
+<h3 id="secondary-menu">Secondary menu</h3>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui secondary menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>The code snippet above results to the following:</p>
+<div class="ui secondary menu">
+  <div class="header item">
+    Navigation
+  </div>
+  <a href="#" class="item">About</a>
+  <a href="#" class="item">Contact</a>
+</div>
+
+<h3 id="pointing">Pointing</h3>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui pointing menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header active item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p> The active item is the one with pointing stuff.</p>
+ <div class="ui pointing menu">
+   <div class="header active item">
+     Navigation
+   </div>
+   <a href="#" class="item">About</a>
+   <a href="#" class="item">Contact</a>
+ </div>
+
+
+<h3 id="secondary-pointing">Secondary pointing</h3>
+<p>This one is what I&#39;m using on this site, except it&#39;s inverted.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ui secondary pointing menu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header active item"</span>&gt;</span>
+    Navigation
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"item"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>The snippet above looks like the following:</p>
+<div class="ui secondary pointing menu">
+  <div class="header active item">
+    Navigation
+  </div>
+  <a href="#" class="item">About</a>
+  <a href="#" class="item">Contact</a>
+</div>
+
+
+<h2 id="conclusion">Conclusion</h2>
+<p>That&#39;s just scratching the surface! Semantic UI can do a lot more. I <strong>highly</strong> suggest you read
+more <a href="http://semantic-ui.com/collections/menu.html">over at semantic-ui&#39;s documentation</a></p>
+
+  </div>
+  <br>
+  <div class="ui black tag labels">
+    <h4 class="ui header">Tags:</h4>
+    
+      <div class="ui label">
+        Semantic UI
+      </div>
+    
+      <div class="ui label">
+        Updates
+      </div>
+    
+  </div>
+<div class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#CONFIGURATIONuration-variables
+       */
+
+      var disqus_config = function () {
+          this.page.url = 'http://dj.diaz.tech/2016/07/06/semantic-ui-navigation-bar/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = 'How to make a Navigation Bar in Semantic UI'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      // var disqus_shortname = 'dijsblog';
+      // var disqus_identifier = '/2016/07/06/semantic-ui-navigation-bar/';
+      // var disqus_title = 'How to make a Navigation Bar in Semantic UI';
+
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = '//dijsblog.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="five wide computer table sixteen wide mobile column">
+
+                <!-- Blog Search Well -->
+                <div class="ui padded raised segment">
+                    <h4>Subscribe.</h4>
+                        <p>
+                          You can't. for now. :P
+                        </p>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Recently Posted -->
+                <div class="ui padded raised segment">
+                    <h4>Recently Posted</h4>
+                    <div class="ui list">
+                        
+                            <a href="/2016/08/14/djs-july-update/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    August 14, 2016 &raquo; &raquo; DJ's Blog - July Update
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/07/06/semantic-ui-navigation-bar/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    July 6, 2016 &raquo; &raquo; How to make a Navigation Bar in Semantic UI
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/28/just-a-little-update/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 28, 2016 &raquo; &raquo; An update on how things are going
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/18/semantic-ui/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 18, 2016 &raquo; &raquo; Site Update! - Semantic UI
+                                </span>
+                            </a>
+                        
+                            <a href="/2016/06/14/hello-world/" class="item">
+                                <i class="right triangle icon"></i>
+                                <span class="content">
+                                    June 14, 2016 &raquo; &raquo; Hello World! Welcome to my Blog!
+                                </span>
+                            </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="ui padded raised segment">
+                    <h4>Tags</h4>
+                    <div class="row">
+                        <div>
+                            <div class="ui black tag labels">
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/hello-world">Hello World!</a>
+                                    </div>
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/semantic-ui">Semantic UI</a>
+                                    </div>
+                              
+                                    <div class="ui label">
+                                        <a href="/tags/updates">Updates</a>
+                                    </div>
+                              
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                <div class="center aligned" id="divfix">
+                  <a type="button" name="button" href="#top" class="large red circular ui icon button">
+                    <i class="large icon chevron circle up"></i>
+                  </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+        <div class="ten wide column">
+            <hr>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="ui centered stackable grid">
+                <div class="center aligned eight wide column">
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Posts on</span> <a xmlns:cc="http://creativecommons.org/ns#" href="http://dj.diaz.tech" property="cc:attributionName" rel="cc:attributionURL">This blog</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                </div>
+            </div>
+                <!-- /.col-lg-12 -->
+            <!-- /.row -->
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Disqus count script -->
+    <script id="dsq-count-scr" src="//dijsblog.disqus.com/count.js" async></script>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Semantic UI Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+
+    <!-- Site javascript files -->
+    <script src="/js/animation.js"> </script>
+</body>
+
+</html>

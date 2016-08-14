@@ -1,0 +1,62 @@
+/*!
+ * Start Bootstrap - Blog Home (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: #f5f5f5;
+}
+
+.blog-header {
+  background: url("img/banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  min-height: 250px;
+  /*box-shadow: 3px 3px 14px gray;*/
+}
+
+.blog-header img {
+  display: none;
+}
+
+h3.ui.header, h2.ui.header a {
+  color: white;
+  font-weight: 900;
+  text-shadow: 8px 8px 14px rgba(62, 62, 62, 1);
+  font-size: 2em;
+  }
+
+
+#blog-navigation {
+  min-height: 55px;
+  background-color: #2e2e2e;
+}
+
+.navbar-inverse {
+  background-color: #1C213E;
+}
+
+article {
+  background-color: snow;
+  padding: 1rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 3px 3px 14px gray;
+}
+
+.well {
+  background-color: snow;
+  box-shadow: 3px 3px 14px gray;
+}
+.blog-article {
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+}
+
+#divfix {
+  position: fixed;
+  z-index: 3000;
+  bottom: 2em;
+  right: 2em;
+}
